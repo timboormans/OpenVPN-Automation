@@ -389,7 +389,7 @@ class OpenVPN_Automation {
 
         // autoconfig
         $pconfig['common_name'] = $username;
-        $pconfig['custom_options'] = 'ifconfig-push '.$ipv4.' 255.255.255.'.(intval($last_octet_ipv4) >= 208 ? '224' : '240').';ifconfig-ipv6-push '.$ipv6.'/124;auth-nocache;';
+        $pconfig['custom_options'] = 'ifconfig-push '.$ipv4.' 255.255.255.0;ifconfig-ipv6-push '.$ipv6.'/124;auth-nocache;';
         $pconfig['act'] = 'new';
         $pconfig['save'] = 'Save';
 
